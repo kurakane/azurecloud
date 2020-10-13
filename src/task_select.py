@@ -19,7 +19,7 @@ def run():
         sys.exit(-1)
 
     # JOB IDをそのままディレクトリとする.
-    file_name = os.path.join(job_id, FILE_SELECT)
+    file_name = os.path.join('/data-in/' + job_id, FILE_SELECT)
     print(f'入力ファイル [{file_name}]')
 
     if not os.path.exists(file_name):
