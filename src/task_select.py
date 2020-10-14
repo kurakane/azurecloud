@@ -1,11 +1,10 @@
-# 約定情報を取得するTaskの為のモジュール.
+# 約定データを取得するTaskのモジュール.
 
 import os
 import pickle
 import sys
 
-# 検索条件のファイル名.
-FILE_SELECT = 'condition.txt'
+import cfg
 
 def run():
 
@@ -19,7 +18,7 @@ def run():
         sys.exit(-1)
 
     # JOB IDをそのままディレクトリとする.
-    file_name = os.path.join('/data-in/' + job_id, FILE_SELECT)
+    file_name = os.path.join('/data-in/' + job_id, cfg.FILE_SELECT)
     print(f'入力ファイル [{file_name}]')
 
     if not os.path.exists(file_name):
