@@ -4,6 +4,8 @@ import os
 
 import cfg
 import util
+import dummy
+
 
 def run():
     # JOB IDを取得する.
