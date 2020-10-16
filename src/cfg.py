@@ -16,3 +16,5 @@ FILE_TMP = 'tmp.dmp'
 FILE_HOLIDAYS = 'Holidays'
 # 検索条件のファイル名. (クライアント側と合わせること)
 FILE_SELECT = 'ObsTradeQueryBuilder'
+# 明細のファイル名.
+FILE_TRADES = 'SplTrades'

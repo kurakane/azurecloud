@@ -12,6 +12,8 @@ import pickle
 
 def run():
 
+    util.dump_env()
+
     # JOB IDを取得する.
     job_id = util.get_job_id()
     # 入力ファイルのパスを生成する. JOB IDをそのままディレクトリとする.
@@ -32,8 +34,11 @@ def run():
         account_name=cfg.STORAGE_ACCOUNT_NAME, account_key=cfg.STORAGE_ACCOUNT_KEY)
 
     # アップロードファイルをローカルに出力する.
-    with open(cfg.FILE_TMP, 'wb') as f:
-        pickle.dump(object, f)
+    file_path = os.path.join(util.get_workdir(), cfg.FILE_TRADES + '.tmp')
+    with open(file_path, 'wb') as f:
+        pickle.dump(spl_trades, f)
+
+    # TODO:アップロードファイルをBZ2で書き込みする.
 
     print(blob_service_client)
 
