@@ -8,14 +8,20 @@ import dummy
 
 
 def run():
-    # JOB IDを取得する.
-    job_id = util.get_job_id()
-    # 入力ファイルのパスを生成する. JOB IDをそのままディレクトリとする.
-    input_file_path = cfg.STORAGE_CONTAINER_INPUT + job_id
 
     # 休日情報を復元する.
-    holidays = util.load_bz2_file(os.path.join(input_file_path, cfg.FILE_HOLIDAYS + '.bz2'))
+    holidays = util.load_bz2_file(util.get_inputdir(), cfg.FILE_HOLIDAYS + '.bz2')
     print(holidays.dump())
+
+    # 約定データを復元する.
+    spl_treads = util.load_bz2_file(util.get_inputdir(), cfg.FILE_TRADES + '.bz2')
+    print(f'明細数. [{len(spl_treads)}]')
+
+    # Task IDを取得する.
+
+    # 約定データからcsvファイルを出力する.
+    for spl_trade in spl_treads:
+        print('XXXXXXXXXXXXXXXXXXXXXXX')
 
     print('calc')
 
