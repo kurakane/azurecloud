@@ -1,6 +1,4 @@
-# 計算のTaskのモジュール.
-
-import os
+"""計算のTaskのモジュール."""
 
 import cfg
 import util
@@ -8,6 +6,8 @@ import dummy
 
 
 def run():
+
+    util.print_env()
 
     # 休日情報を復元する.
     holidays = util.load_bz2_file(util.get_inputdir(), cfg.FILE_HOLIDAYS + '.bz2')
@@ -21,9 +21,9 @@ def run():
 
     # 約定データからcsvファイルを出力する.
     for spl_trade in spl_treads:
-        print('XXXXXXXXXXXXXXXXXXXXXXX')
+        spl_trade.dump()
 
-    print('calc')
+    print('正常終了しました.')
 
 
 run()

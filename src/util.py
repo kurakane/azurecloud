@@ -40,6 +40,11 @@ def get_outputdir():
     return cfg.STORAGE_CONTAINER_OUTPUT + get_job_id()
 
 
+def print_env():
+    print(f'ノード:[{get_env("AZ_BATCH_NODE_ID")}]')
+    print(f'タスクID:[{get_env("AZ_BATCH_TASK_ID")}]')
+
+
 def load_bz2_file(file_path, file_name):
     """BZ2圧縮されたファイルをloadする."""
     file_path_bz2 = os.path.join(file_path, file_name)
