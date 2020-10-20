@@ -2,7 +2,6 @@
 
 import os
 
-import numpy as np
 import pandas as pd
 
 import cfg
@@ -26,7 +25,7 @@ def run():
     path_output = os.path.join(util.get_outputdir(), util.get_task_id())
     os.makedirs(path_output)
     # 出力ファイルパスを生成する.
-    path_output_npv = os.path.join(path_output, 'npv.csv')
+    path_output_npv = os.path.join(path_output, cfg.FILE_NPV)
 
     # ★NPVファイルを模倣.
     df = pd.DataFrame([], columns=['TradeNo', 'NPV', 'Message'], index=range(len(spl_treads)))

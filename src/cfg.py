@@ -11,3 +11,6 @@ FILE_HOLIDAYS = 'Holidays'
 FILE_SELECT = 'ObsTradeQueryBuilder'
 # 明細のファイル名. (クライアント側と合わせること)
 FILE_TRADES = 'SplTrades'
+
+# NPVファイル名.
+FILE_NPV = 'npv.csv'
