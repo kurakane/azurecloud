@@ -25,6 +25,11 @@ def get_job_id():
     return get_env('AZ_BATCH_JOB_ID')
 
 
+def get_task_id():
+    """環境変数からTASK IDを取得する."""
+    return get_env('AZ_BATCH_TASK_ID')
+
+
 def get_workdir():
     """環境変数から作業フォルダを取得する."""
     return get_env('AZ_BATCH_TASK_WORKING_DIR')
@@ -41,6 +46,7 @@ def get_outputdir():
 
 
 def print_env():
+    """デバッグ用に環境変数を出力する."""
     print(f'ノード:[{get_env("AZ_BATCH_NODE_ID")}]')
     print(f'タスクID:[{get_env("AZ_BATCH_TASK_ID")}]')
 

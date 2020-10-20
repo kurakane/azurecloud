@@ -1,5 +1,7 @@
 """約定データを取得するTaskのモジュール."""
 
+import os
+
 import cfg
 import dummy
 import util

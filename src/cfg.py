@@ -9,5 +9,5 @@ STORAGE_CONTAINER_OUTPUT = '/data-out/'
 FILE_HOLIDAYS = 'Holidays'
 # 検索条件のファイル名. (クライアント側と合わせること)
 FILE_SELECT = 'ObsTradeQueryBuilder'
-# 明細のファイル名.
+# 明細のファイル名. (クライアント側と合わせること)
 FILE_TRADES = 'SplTrades'
