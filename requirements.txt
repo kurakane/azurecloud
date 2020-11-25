@@ -1,6 +1,8 @@
 # To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
 
-# クラウド側で操作しなければ不要.
-# azure-storage-blob==1.4.0
+azure-batch==9.0.0
+azure-common==1.1.26
+azure-storage-blob==12.6.0
+azure-storage-common==2.1.0
 
 pandas==1.1.3
