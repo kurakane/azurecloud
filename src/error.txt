@@ -1,0 +1,8 @@
+リクエストがサーバー上のリソースを正しくしていない模様。
+https://docs.microsoft.com/ja-jp/rest/api/batchservice/batch-status-and-error-codes#common-rest-api-error-codes
+
+File "task_creator.py", line 46, in create_task
+  result = client.task.add_collection(job_id, [task])
+File "/usr/local/lib/python3.8/site-packages/azure/batch/custom/patch.py", line 279, in bulk_add_collection
+  raise CreateTasksErrorException(
+azure.batch.custom.custom_errors.CreateTasksErrorException: {'additional_properties': {}, 'lang': 'en-US', 'value': 'The requested URI does not represent any resource on the server.\nRequestId:ef351247-fb86-4187-9614-71d3fd5c16fb\nTime:2020-11-24T06:50:22.1640011Z'}
